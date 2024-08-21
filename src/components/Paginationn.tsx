@@ -9,8 +9,8 @@ const Paginationn = () => {
         Selected Page: {currentPage}
       </p>
       <Pagination
-        total={5}
-        color="secondary"
+        total={10}
+        color="primary"
         page={currentPage}
         onChange={setCurrentPage}
       />
@@ -18,7 +18,7 @@ const Paginationn = () => {
         <Button
           size="sm"
           variant="flat"
-          color="secondary"
+          color="primary"
           onPress={() => setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))}
         >
           Previous
@@ -26,7 +26,7 @@ const Paginationn = () => {
         <Button
           size="sm"
           variant="flat"
-          color="secondary"
+          color="primary"
           onPress={() =>
             setCurrentPage((prev) => (prev < 10 ? prev + 1 : prev))
           }

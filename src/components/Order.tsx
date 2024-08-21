@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import { Button } from "@nextui-org/react";
 import { Order as OrderType } from "../store/orderStore";
@@ -11,8 +14,9 @@ interface OrderProps {
 
 const Order: React.FC<OrderProps> = ({ order, onAccept, onReject, onComplete }) => (
   <div className="border p-4 m-2">
-    <h3>{order.clientName}</h3>
-    <p>{order.details}</p>
+    <h1>Order Number:{order.id}</h1>
+    <h1> Client Name: {order.clientName}</h1>
+    <p> Order Details: {order.details}</p>
     {!order.completed && onAccept && onReject && (
       <>
         <Button color="success" variant="ghost" onClick={onAccept} className="m-3">

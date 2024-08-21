@@ -10,7 +10,7 @@ const PastOrders: React.FC = () => {
       <h2 className="text-3xl">In Progress Orders</h2>
       <div className="flex">
         {pastOrders.length === 0 ? (
-          <p>No past orders.</p>
+          <p>No Orders in the Queue.</p>
         ) : (
           pastOrders.map((order) => (
             <Order

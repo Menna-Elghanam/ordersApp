@@ -1,4 +1,6 @@
+
 import { create } from "zustand";
+import { incomingOrdersData } from "./orderData";
 
 export type Order = {
   id: number;
@@ -16,11 +18,7 @@ type State = {
 };
 
 export const useOrderStore = create<State>((set) => ({
-  incomingOrders: [
-    { id: 1, clientName: "Client A", details: "Order 1 details", completed: false },
-    { id: 2, clientName: "Client B", details: "Order 2 details", completed: false },
-    { id: 3, clientName: "Client C", details: "Order 3 details", completed: false },
-  ],
+  incomingOrders: incomingOrdersData,
   pastOrders: [],
   acceptOrder: (id) =>
     set((state) => {
@@ -44,3 +42,10 @@ export const useOrderStore = create<State>((set) => ({
       ),
     })),
 }));
+
+
+
+
+
+
+
